@@ -637,6 +637,10 @@ body {
     width: 100%;
   }
 
+  .track__inner {
+    min-width: auto;
+  }
+
 }
 
 @media (max-width: 779px) {
