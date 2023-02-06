@@ -20,14 +20,15 @@ a {
 }
 
 li {
-list-style: none;
+  list-style: none;
 }
 
 img {
   max-width: 100%;
 }
 
-.menu-mobile, .menu-btn {
+.menu-mobile,
+.menu-btn {
   display: none;
 }
 
@@ -404,14 +405,14 @@ body {
 .blog__slider {
   position: relative;
   padding-top: 50px;
-margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 .blog__button {
-position: absolute;
-top: 0;
-cursor: pointer;
-left: 50%;
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  left: 50%;
 }
 
 .swiper-button-left {
@@ -477,10 +478,10 @@ left: 50%;
 
 .footer__info-item dt,
 .footer__adress-title {
-font-weight: 700;
-font-size: 16px;
-text-transform: uppercase;
-margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .footer__info-item dd {
@@ -513,7 +514,13 @@ margin-bottom: 20px;
   align-items: center;
 }
 
-
+@media (max-width: 1366px) {
+  .promo {
+    background: linear-gradient(to right, rgb(179 179 179 / 70%), rgb(173 173 173 / 70%)), url(../img/promo.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
 
 @media (max-width: 1100px) {
   .promo {
@@ -557,6 +564,81 @@ margin-bottom: 20px;
   }
 }
 
+@media (max-width: 840px) {
+  .menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 45px;
+    height: 27px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+  }
+
+  .menu-btn span {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+  }
+
+  .menu-mobile {
+    display: none;
+    transform: translateY(-100%);
+  }
+
+  .menu-mobile.menu--open {
+    transform: translateY(0%);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #040404;
+    height: 100vh;
+    z-index: 5;
+    text-align: center;
+    padding-top: 140px;
+  }
+
+  .menu-link {
+    color: #D8D4CA;
+    display: block;
+    padding: 20px 0;
+    font-size: 3.5vh;
+  }
+
+  .logo {
+    z-index: 10;
+  }
+
+  .info__part-textbox {
+    display: block;
+    padding-bottom: 15px;
+  }
+
+  .info__part {
+    display: block;
+  }
+
+  .info__part--two .info__text,
+  .info__part--third .info__text {
+    max-width: 100%;
+  }
+
+  .info__table {
+    width: 100%;
+  }
+
+  .info__part-img {
+    width: 100%;
+  }
+
+}
+
 @media (max-width: 779px) {
   .evo__descr-list {
     display: block;
@@ -589,6 +671,10 @@ margin-bottom: 20px;
     display: none;
   }
 
+  .evo-black__inner::before {
+    display: none;
+  }
+
   .evo-black__info {
     display: block;
   }
@@ -600,80 +686,6 @@ margin-bottom: 20px;
   .footer__top {
     flex-direction: column;
   }
-}
-
-@media (max-width: 840px) {
-  .menu-btn {
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-width: 45px;
-height: 27px;
-background-color: transparent;
-border: none;
-cursor: pointer;
-z-index: 10;
-  }
-
-  .menu-btn span {
-height: 3px;
-width: 100%;
-background-color: #fff;
-  }
-
-  .menu-mobile {
-    display: none;
-    transform: translateY(-100%);
-  }
-
-  .menu-mobile.menu--open {
-    transform: translateY(0%);
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #040404;
-    height: 100vh;
-    z-index: 5;
-    text-align: center;
-    padding-top: 140px;
-  }
-.menu-link {
-  color: #D8D4CA;
-  display: block;
-  padding: 20px 0;
-  font-size: 3.5vh;
-}
-
-.logo {
-  z-index: 10;
-}
-
-.info__part-textbox {
-    display: block;
-    padding-bottom: 15px;
-}
-
-.info__part {
-  display: block;
-}
-
-.info__part--two .info__text,
-.info__part--third .info__text {
-max-width: 100%;
-}
-
-.info__table {
-  width: 100%;
-}
-
-.info__part-img {
-  width: 100%;
-}
-
 }
 
 @media (max-width: 560px) {
@@ -700,9 +712,9 @@ max-width: 100%;
 }
 
 @media (max-width: 480px) {
-.footer__bottom {
-  flex-direction: column;
-}
+  .footer__bottom {
+    flex-direction: column;
+  }
 
 }
 
@@ -719,4 +731,3 @@ max-width: 100%;
     padding: 15px 0;
   }
 }
-
