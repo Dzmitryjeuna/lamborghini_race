@@ -580,6 +580,10 @@ body {
   .menu-btn span {
     height: 3px;
     width: 100%;
+    background-color: #040404;
+  }
+
+  .menu-btn:hover span {
     background-color: #fff;
   }
 
@@ -719,6 +723,18 @@ body {
   .footer__bottom {
     flex-direction: column;
   }
+  .footer__address {
+    flex-basis: 400px;
+}
+.footer__bottom-logo {
+  padding: 10px 0;
+}
+
+.footer {
+  padding: 100px 0 20px;
+}
+
+
 
 }
 
