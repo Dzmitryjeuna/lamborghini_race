@@ -734,13 +734,11 @@ body {
   padding: 100px 0 20px;
 }
 
-
-
 }
 
 @media (max-width: 340px) {
   .title {
-    font-size: 42px;
+    font-size: 40px;
   }
 
   .subtitle {
