@@ -671,10 +671,6 @@ body {
     display: none;
   }
 
-  .evo-black__inner::before {
-    display: none;
-  }
-
   .evo-black__info {
     display: block;
   }
@@ -707,6 +703,10 @@ body {
   }
 
   .evo-black__inner::after {
+    display: none;
+  }
+
+  .evo-black__inner::before {
     display: none;
   }
 }
